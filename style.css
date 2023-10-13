@@ -21,7 +21,7 @@ body {
 #page {
   display: grid;
   height: 100vh;
-  grid-auto-rows: 95vh;
+  grid-template-rows: 1fr;
 }
 
 .first-section {
@@ -29,7 +29,7 @@ body {
   row-gap: 2.5rem;
   grid-auto-rows: max-content;
   justify-items: center;
-
+  padding-bottom: 9rem;
 }
 
 .first-section img:first-child {
@@ -51,9 +51,34 @@ body {
   color: var(--font-color);
 }
 
-#page section:nth-child(2) {
-  background-color: orange;
+.second-section {
+  background-color: var(--font-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 6rem 4rem;
 }
+
+.info-card {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 352px;
+  overflow: hidden;
+}
+
+.info-card img {
+  margin-bottom: 1.5rem;
+}
+
+.info-card h2 {
+  font-size: 2.9rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+}
+
 
 #page section:nth-child(3) {
   background-color: blue;
