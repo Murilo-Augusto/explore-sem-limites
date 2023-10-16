@@ -33,9 +33,15 @@ body {
 }
 
 .first-section img:first-child {
-  width: 100%;
   object-fit: cover;
   max-width: 364px;
+}
+
+.first-section > div {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  row-gap: 3.5rem;
 }
 
 .first-section h1 {
@@ -52,7 +58,7 @@ body {
 }
 
 .second-section {
-  background-color: var(--font-color);
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -66,6 +72,7 @@ body {
   padding: 2rem;
   max-width: 352px;
   overflow: hidden;
+  box-shadow: 0px 3.31077px 13.24308px 0px rgba(0, 0, 0, 0.25);
 }
 
 .info-card img {
@@ -79,7 +86,206 @@ body {
   color: var(--title-color);
 }
 
+.third-section {
+  padding: 7rem 4rem;
+}
 
-#page section:nth-child(3) {
-  background-color: blue;
+form {
+  max-width: 34.8rem;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.fieldset-wrapper legend {
+  color: var(--title-color);
+  font-weight: 900;
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--font-color);
+}
+
+.input-wrapper label {
+  position: absolute;
+  left: 16px;
+}
+
+.input-wrapper textarea + label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 4.8rem;
+  padding: 1.2rem 1.6rem 1.2rem 5.2rem;
+  border: none;
+  border-radius: 1.6rem;
+  background-color: transparent;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--font-color);
+  font: 1.6rem;
+  font-weight: 600;
+  font-family: 'Mulish', sans-serif;
+}
+
+.input-wrapper textarea {
+  width: 100%;
+  height: 12.6rem;
+  padding: 1.6rem;
+
+  border-radius: 16px;
+  border: 1.5px solid #312D64;
+  font: 1.6rem;
+  font-weight: 600;
+  font-family: 'Mulish', sans-serif;
+  color: var(--font-color);
+  background-color: transparent;
+  resize: none
+}
+
+form button {
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 2.4rem;
+  border-radius: 16px;
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  cursor: pointer;
+}
+
+#background-stars {
+  display: none;
+  transition: all 200ms ease-out;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  height: 78px;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #FFF;
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+@media (min-width: 1024px) {
+  .first-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem 10rem;
+  }
+
+  .first-section img:first-child {
+    object-fit: cover;
+    width: 55%;
+    max-width: 720px;
+  }
+
+  .first-section > div {
+    display: grid;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-items: flex-start;
+    row-gap: 0;
+    height: 100%;
+    width: 50%;
+    max-width: max-content;
+    padding-bottom: 3.2rem;
+  }
+  
+  .first-section h1 {
+    font-size: 6rem;
+  }
+
+  .first-section p {
+    text-align: left;
+    font-size: 3.2rem;
+  }
+
+  .second-section {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+    padding: 6rem 4rem;
+  }
+  
+  .info-card {
+    background-color: #fff;
+    border-radius: 2.4rem;
+    padding: 3.2rem;
+    max-width: 366px;
+    min-height: 448px;
+    overflow: hidden;
+  }
+  
+  .info-card img {
+    margin-bottom: 2.5rem;
+  }
+  
+  .info-card h2 {
+    font-size: 3.5rem;
+    font-size: clamp(2rem, 3rem, 3.5rem);
+  }
+
+  .info-card p {
+    font-size: clamp(1.5rem, 18rem, 2rem);
+  }
+  
+  .third-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 9.2rem;
+    min-height: 61.2rem;
+    padding: 9.5rem 0 0 11rem;
+  }
+
+  form {
+    max-width: 59.2rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .fieldset-wrapper legend {
+    font-size: 4.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  form button {
+    margin-top: 3.4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  #background-stars {
+    display: block;
+    right: 0;
+    top: 0;
+    margin-top: -9.5rem;   
+  }
 }

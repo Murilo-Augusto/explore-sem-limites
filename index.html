@@ -14,10 +14,12 @@
     <section class="sections first-section">
       <img src="./assets/noLimits.png" alt="Astronauta com planetas envolta">
       <div>
-        <h1>Explore sem limites</h1>
-        <p>Porque o aprendizado é contínuo</p>
+        <div>
+          <h1>Explore sem limites</h1>
+          <p>Porque o aprendizado é contínuo</p>
+        </div>
+        <img id="arrow-to-bottom" src="./assets/toBottom.png" alt="Seta para baixo">
       </div>
-      <img src="./assets/toBottom.png" alt="Seta para baixo">
     </section>
 
     <section class="sections second-section">
@@ -46,9 +48,41 @@
       </div>
     </section>
 
-    <section class="sections">
+    <section class="sections third-section">
+      <form id="form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Entre em contato</legend>
+            <div class="input-wrapper">
+              <div>
+                <label for="name-contact"><img for="name-contact" src="./assets/user-icon.svg" alt=""></label>
+                <input type="text" id="name-contact" placeholder="Seu nome">
+              </div>
+            </div>
 
+            <div class="input-wrapper">
+              <div>
+                <label for="email-contact"><img for="name-contact" src="./assets/arroba-icon.svg" alt=""></label>
+                <input type="email" id="email-contact" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <textarea id="message-contact">Digite sua mensagem aqui...</textarea>
+              <label for="message-contact">Mensagem</label>
+            </div>
+          </div>
+        </fieldset>
+      
+        <button form="form">Enviar mensagem</button>
+      </form>
+
+      <img id="background-stars" src="./assets/background-stars.png" alt="">
     </section>
+
+    <footer>
+      © 2023 - Rocketseat Explorer
+    </footer>
   </div>
 </body>
 </html>
